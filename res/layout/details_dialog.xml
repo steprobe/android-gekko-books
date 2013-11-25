@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootLayout"
+    >
+
+    <RelativeLayout
+        android:id="@+id/dataLayout"
+        android:padding="@dimen/dialogMargin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/previewImage"
+            android:layout_height="90dp"
+            android:layout_width="90dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/imageMarginRight"
+            android:contentDescription=""/>
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="@dimen/headerTextSize"
+            android:id="@+id/authorTitleHeader"
+            android:text="@string/authorTitle" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/previewImage"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/authorTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/authorTitleHeader"
+            android:layout_toRightOf="@id/previewImage"
+            android:layout_marginLeft="@dimen/dataOffset"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="@dimen/headerTextSize"
+            android:id="@+id/priceTitleView"
+            android:text="@string/priceTitle" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/previewImage"
+            android:layout_below="@+id/authorTitleText" />
+
+        <TextView
+            android:id="@+id/priceTitleText" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/priceTitleView"
+            android:layout_toRightOf="@id/previewImage"
+            android:layout_marginLeft="@dimen/dataOffset"/>
+
+    </RelativeLayout>
+        
+    <ProgressBar
+        android:id="@+id/loadingLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
+    
+</FrameLayout>
